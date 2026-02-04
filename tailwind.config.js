@@ -24,6 +24,20 @@ module.exports = {
       boxShadow: {
         glow: '0 0 4px rgb(0 0 0 / 0.1)',
       },
+      colors: {
+        vest: {
+          50: '#ECFFF3',
+          100: '#D6FFE7',
+          200: '#B0FFD1',
+          300: '#7AFFB1',
+          400: '#4CFF93',
+          500: '#3AFF86',
+          600: '#18E371',
+          700: '#0CB85A',
+          800: '#0A8B45',
+          900: '#0A703A',
+        },
+      },
       maxWidth: {
         lg: '33rem',
         '2xl': '40rem',
