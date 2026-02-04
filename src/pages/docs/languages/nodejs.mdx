@@ -1,0 +1,37 @@
+import { LanguagesBreadcrumb } from '@/components/LanguagesBreadcrumb'
+import { GuideHeading } from '@/components/GuideHeading'
+import { NodeIcon } from '@/components/icons/NodeIcon'
+import { AstroIcon } from '@/components/icons/AstroIcon'
+import { ExpressIcon } from '@/components/icons/ExpressIcon'
+import { NextIcon } from '@/components/icons/NextIcon'
+import { RemixIcon } from '@/components/icons/RemixIcon'
+import { NetlifyIcon } from '@/components/icons/NetlifyIcon'
+
+import { Heading } from '@/components/Heading'
+import { HerokuIcon } from '@/components/icons/HerokuIcon'
+import { Platforms } from '@/components/Platforms'
+import { FrameworksNodejs } from '@/components/FrameworksNodejs'
+import { PackageManagers } from '@/components/PackageManagers'
+
+export const description =
+  'Use `dotenvx` with Node.js 🚀.'
+
+<LanguagesBreadcrumb icon={
+  <>
+    <NodeIcon className="h-9 w-9 text-[#339933]"/>
+  </>
+} />
+# Node.js
+<GuideHeading lead={description} />
+
+<div className="my-16 xl:max-w-none">
+  <Heading level={2} id="frameworks">
+    Frameworks
+  </Heading>
+  <div className="not-prose mt-4 grid grid-cols-1 gap-x-6 gap-y-10 border-t border-zinc-900/5 pt-10 dark:border-white/5 sm:grid-cols-2 xl:max-w-none xl:grid-cols-3">
+    <FrameworksNodejs />
+  </div>
+</div>
+
+<Platforms includeNode="true" />
+<PackageManagers />

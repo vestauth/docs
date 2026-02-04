@@ -1,0 +1,30 @@
+<CodeGroup>
+
+```bash {{ title: "Node" }}
+docker build -t app . && docker run -it --init --rm -p 3000:3000 app
+```
+
+```bash {{ title: "Python" }}
+docker build -t app . && docker run -it --init --rm -p 5000:5000 app
+```
+
+```bash {{ title: "PHP" }}
+docker build -t app . && docker run -it --init --rm -p 8080:80 app
+```
+
+```bash {{ title: "Ruby" }}
+docker build -t app . && docker run -it --init --rm -p 4567:4567 app
+```
+
+```bash {{ title: "Go" }}
+docker build -t app . && docker run -it --init --rm -p 1323:1323 app
+```
+
+```bash {{ title: "Rust" }}
+docker build -t app . && docker run -it --init --rm -p 20629:20629 app
+
+# if you get the error [FATAL tini (6)] exec ./target/release/app failed: No such file or directory
+# make sure your package.NAME in Cargo.toml matches your CMD ["./target/release/NAME"] in your Dockerfile
+```
+
+</CodeGroup>

@@ -1,0 +1,61 @@
+import { Heading } from '@/components/Heading'
+import { Button } from '@/components/Button'
+import { HeroPattern } from '@/components/HeroPattern'
+
+import { NodeIcon } from '@/components/icons/NodeIcon'
+import { PythonIcon } from '@/components/icons/PythonIcon'
+import { RubyIcon } from '@/components/icons/RubyIcon'
+import { GoIcon } from '@/components/icons/GoIcon'
+import { PhpIcon } from '@/components/icons/PhpIcon'
+import { RustIcon } from '@/components/icons/RustIcon'
+import { GitHubIcon } from '@/components/icons/GitHubIcon'
+
+import { Languages } from '@/components/Languages'
+import { Frameworks } from '@/components/Frameworks'
+import { Platforms } from '@/components/Platforms'
+import { Cis } from '@/components/Cis'
+import { BackgroundJobs } from '@/components/BackgroundJobs'
+import { PackageManagers } from '@/components/PackageManagers'
+import { ProcessManagers } from '@/components/ProcessManagers'
+import { Monorepos } from '@/components/Monorepos'
+import { Concepts } from '@/components/Concepts'
+
+export const description =
+  'Documentation for `vestauth`'
+
+export const sections = [
+  { title: 'Getting Started', id: 'getting-started' },
+]
+
+<HeroPattern />
+
+##### vestauth
+# Documentation
+
+*auth for agents*–from the creator of [`dotenvx`](https://github.com/dotenvx/dotenvx). {{ className: 'lead' }}
+
+<div className="not-prose mt-6 mb-16 flex gap-3">
+  <Button href="/docs/quickstart" arrow="right" children="Quickstart" />
+  <Button href="/docs/install" variant="outline" children="Installation" />
+</div>
+
+## Getting Started
+
+<CodeGroup>
+
+```bash {{ title: "Curl" }}
+# download it directly as a standalone binary
+curl -sfS https://vestauth.sh/install.sh | sh
+vestauth help
+```
+
+```bash {{ title: "Npm" }}
+# install it with npm
+npm install vestauth --save
+npx vestauth help
+```
+
+</CodeGroup>
+
+* identity
+* authentication

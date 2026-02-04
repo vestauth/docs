@@ -1,0 +1,154 @@
+export const description =
+  'Other ways to install `vestauth`'
+
+##### [Documentation](/docs)
+# Install
+
+Install `vestauth` where you need it. {{ className: 'lead' }}
+
+<CodeGroup>
+
+```bash {{ title: "Npm" }}
+npm install vestauth --save
+npx vestauth help
+```
+
+```bash {{ title: "Curl" }}
+curl -sfS https://vestauth.sh | sh
+vestauth help
+```
+
+```bash {{ title: "GitHub Releases" }}
+curl -L -o vestauth.tar.gz "https://github.com/vestauth/vestauth/releases/latest/download/vestauth-$(uname -s)-$(uname -m).tar.gz"
+tar -xzf vestauth.tar.gz
+./vestauth help
+```
+
+</CodeGroup>
+
+## Npm
+
+`vestauth` is made with javascript.
+
+```bash
+npm install vestauth --save
+```
+```js
+// index.js
+require('vestauth').verify()
+```
+
+Find the [vestauth package here](https://www.npmjs.com/package/vestauth).
+
+## Shell
+
+Install with curl via our install.sh script.
+
+```bash
+curl -sfS https://vestauth.sh | sh
+```
+
+Or with wget:
+
+```bash
+wget -qO- https://vestauth.sh | sh
+```
+
+Read the [install.sh script here](https://github.com/vestauth/vestauth.sh/blob/main/install.sh).
+
+## GitHub Releases
+
+You can also download straight from [GitHub Releases](https://github.com/vestauth/vestauth/releases).
+
+```bash
+curl -L -o vestauth.tar.gz "https://github.com/vestauth/vestauth/releases/latest/download/vestauth-$(uname -s)-$(uname -m).tar.gz"
+tar -xzf vestauth.tar.gz
+./vestauth help
+```
+
+<Note>
+  If you download manually you'll need to move the binary somewhere in your PATH.
+</Note>
+
+## Windows
+
+Download [the windows executable](https://github.com/vestauth/vestauth/releases) directly from the [releases page](https://github.com/vestauth/vestauth/releases).
+
+> * [vestauth-windows-amd64.zip
+](https://github.com/vestauth/releases/raw/main/latest/vestauth-windows-amd64.zip)
+> * [vestauth-windows-x86_64.zip
+](https://github.com/vestauth/releases/raw/main/latest/vestauth-windows-x86_64.zip)
+
+(unzip to extract `vestauth.exe`)
+
+### Standalone
+
+`vestauth` is a standalone binary, so (if you want) you can just download it directly:
+
+```sh
+# download it to `./vestauth`
+curl -sfS --proto '=https' https://vestauth.sh/$(uname)/$(uname -m).tgz | tar xz
+
+# install it to `/usr/local/bin/vestauth`
+sudo install -m 755 vestauth /usr/local/bin
+
+# check it works
+vestauth help
+```
+
+Download a specific version:
+
+```sh
+# download version 0.7.0
+curl -sfS --proto '=https' "https://vestauth.sh/$(uname)/$(uname -m).tgz?version=v0.7.0" | tar xz
+
+# check the version
+./vestauth --version
+```
+
+<Note>
+  You can view available versions at [github.com/vestauth/releases](https://github.com/vestauth/releases/tree/main)
+</Note>
+
+### Npm local
+
+Use vestauth locally as a cli in your node project.
+
+```sh
+npm i vestauth --save
+```
+```json
+{
+  "scripts": {
+    "curl": "./node_modules/.bin/vestauth agent curl"
+  },
+  "dependencies": {
+    "vestauth": "^0.7.0"
+  }
+}
+```
+
+### Npm global
+
+You can also install globally using npm's `--global` flag.
+
+```bash
+npm install vestauth --global
+vestauth help
+```
+
+### Npx
+
+Or prefer to run as needed, uses `npx`.
+
+```bash
+npx vestauth help
+```
+
+### pkgx
+
+[pkgx](https://pkgx.sh) is a single, standalone binary that can run anything. Since it can run anything, it can run `vestauth`:
+
+```sh
+pkgx npx vestauth help
+```
