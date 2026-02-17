@@ -1,0 +1,19 @@
+export const description =
+  'Pretty print curl JSON output.'
+
+##### [Advanced](/docs/advanced)
+# vestauth agent curl --pretty-print
+
+<p className="lead">{description}</p>
+
+```sh
+$ vestauth agent curl https://api.vestauth.com/whoami --pp
+{
+  "uid": "agent-609a4fd2ebf4e6347108c517",
+  "kid": "FGzgs758DBGnI1S0BejChDsK0IKZm3qPpOOXdRnnBkM",
+  "public_jwk": {
+    ...
+  },
+  "well_known_url": "https://agent-609a4fd2ebf4e6347108c517.agents.vestauth.com/.well-known/http-message-signatures-directory"
+}
+```

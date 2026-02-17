@@ -1,0 +1,16 @@
+export const description =
+  'Generate signed headers.'
+
+##### [Advanced](/docs/advanced)
+# vestauth primitives headers
+
+<p className="lead">{description}</p>
+
+```sh
+$ vestauth primitives headers GET http://example.com --pp
+{
+  "Signature": "sig1=:K7z3Nozcq1z5zfJhrd540DWYbjyQ1kR/S7ZDcMXE5gVhxezvG6Rn9BxEvfteiAnBuQhOkvbpGtF83WpQQerGBw==:",
+  "Signature-Input": "sig1=(\"@authority\");created=1770263541;keyid=\"_4GFBGmXKinLBoh3-GJZCiLBt-84GP9Fb0iBzmYncUg\";alg=\"ed25519\";expires=1770263841;nonce=\"0eu7hVMVFm61lQvIryKNmZXIbzkkgpVocoKvN0de5QO8Eu5slTxklJAcVLQs0L_UTVtx4f8qJcqYZ21JTeOQww\";tag=\"web-bot-auth\"",
+  "Signature-Agent": "sig1=agent-35e4a794a904d227ee2373b6.agents.vestauth.com"
+}
+```

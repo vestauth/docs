@@ -1,0 +1,26 @@
+export const description =
+  'Generate public/private keypair.'
+
+##### [Advanced](/docs/advanced)
+# vestauth primitives keypair
+
+<p className="lead">{description}</p>
+
+```sh
+$ vestauth primitives keypair --pp
+{
+  "public_jwk": {
+    "crv": "Ed25519",
+    "x": "QjutZ3_tt2jRD_XSOq4EFCDivnwEzKIrQB2yReddsNo",
+    "kty": "OKP",
+    "kid": "ZCa5pijSUCw7QKgBs6nkvBBzbEjTMKYSt6iwCDQdIYc"
+  },
+  "private_jwk": {
+    "crv": "Ed25519",
+    "d": "RTyREuKAEfIMMs2ejwaKtFefZxt14HmsRR0rFj4U5iM",
+    "x": "QjutZ3_tt2jRD_XSOq4EFCDivnwEzKIrQB2yReddsNo",
+    "kty": "OKP",
+    "kid": "ZCa5pijSUCw7QKgBs6nkvBBzbEjTMKYSt6iwCDQdIYc"
+  }
+}
+```

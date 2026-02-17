@@ -1,0 +1,16 @@
+export const description =
+  'Generate signed headers as agent.'
+
+##### [Advanced](/docs/advanced)
+# vestauth agent headers
+
+<p className="lead">{description}</p>
+
+```sh
+$ vestauth agent headers GET https://api.vestauth.com/whoami --pp
+{
+  "Signature": "sig1=:UW6A7j8jo+gQxd+EeVgDddY51ZOc9plrSaupW/N53hQnQFvP9BuwQHgL7SVPLQIu4cnRzLgvwm7Yu9YMO+HUDQ==:",
+  "Signature-Input": "sig1=(\"@authority\");created=1770396357;keyid=\"FGzgs758DBGnI1S0BejChDsK0IKZm3qPpOOXdRnnBkM\";alg=\"ed25519\";expires=1770396657;nonce=\"PrE7A6I_5fWnxBsBigNvxjp3-YangXl71V1uM3hPZavh918JqzjMSRcjHv_n5XIb3N8WivZEeigCBH6QGDSqgA\";tag=\"web-bot-auth\"",
+  "Signature-Agent": "sig1=agent-609a4fd2ebf4e6347108c517.agents.vestauth.com"
+}
+```

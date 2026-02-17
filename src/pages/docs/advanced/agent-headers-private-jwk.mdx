@@ -1,0 +1,16 @@
+export const description =
+  'Change the AGENT_PRIVATE_JWK used to sign the headers.'
+
+##### [Advanced](/docs/advanced)
+# vestauth agent headers --private-jwk
+
+<p className="lead">{description}</p>
+
+```sh
+$ vestauth agent headers GET https://api.vestauth.com/whoami --private-jwk '{"crv":"Ed25519","d":"RyFk7QTOk_bMjFQKjyAR-vJDp7BITn9U0YBFNdpR9wE","x":"hyAxNMbuTcFQq420Dr46ucF0dRZ_FIyxgsujruEoklM","kty":"OKP","kid":"UfHTArlyLsqM8cB8sNfH2z6XOwc0RmJIq2CAPGfvMjk"}' --pp
+{
+  "Signature": "sig1=:PZUVVjqiECYuk8Hg1GZKKeJmwhLrcRdRA7nm1R595UFK9cx0q9atNFBzKP5wBEmszMIgvpYdMrIQbPEeKz4tCQ==:",
+  "Signature-Input": "sig1=(\"@authority\");created=1770396546;keyid=\"UfHTArlyLsqM8cB8sNfH2z6XOwc0RmJIq2CAPGfvMjk\";alg=\"ed25519\";expires=1770396846;nonce=\"BSIugautfZvN3u5QUgl1mMuyxgmeRsRy9XxX7GXxjJxq1mI0kJl4F-C1nITtOfSeEt6xR1YBfyxsffNKy_wKSA\";tag=\"web-bot-auth\"",
+  "Signature-Agent": "sig1=agent-609a4fd2ebf4e6347108c517.agents.vestauth.com"
+}
+```

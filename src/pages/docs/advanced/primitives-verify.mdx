@@ -1,0 +1,12 @@
+export const description =
+  'Verify signed headers.'
+
+##### [Advanced](/docs/advanced)
+# vestauth primitives verify
+
+<p className="lead">{description}</p>
+
+```sh
+$ vestauth primitives verify GET https://api.vestauth.com/whoami --signature "sig1=:UHqXQbWZmyYW40JRcdCl+NLccLgPmcoirUKwLtdcpEcIgxG2+i+Q2U3yIYeMquseON3fKm29WSL2ntHeRefHBQ==:" --signature-input "sig1=(\"@authority\");created=1770395703;keyid=\"FGzgs758DBGnI1S0BejChDsK0IKZm3qPpOOXdRnnBkM\";alg=\"ed25519\";expires=1770396003;nonce=\"O8JOC1reBofwbpPcdD-MRRCdrtAf4khvJTuhpRI_RiaH_hpU93okLkmPZVFFcUEdYtYfcduaB8Sca54GTd2GXA\";tag=\"web-bot-auth\"" --signature-agent "sig1=agent-609a4fd2ebf4e6347108c517.agents.vestauth.com"
+{"uid":"agent-609a4fd2ebf4e6347108c517", ...}
+```
