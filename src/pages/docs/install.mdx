@@ -8,20 +8,17 @@ Install `vestauth` where you need it. {{ className: 'lead' }}
 
 <CodeGroup>
 
-```bash {{ title: "Npm" }}
-npm install vestauth --save
-npx vestauth help
-```
-
 ```bash {{ title: "Curl" }}
 curl -sfS https://vestauth.sh | sh
-vestauth help
+```
+
+```bash {{ title: "Npm" }}
+npm install vestauth --save
 ```
 
 ```bash {{ title: "GitHub Releases" }}
 curl -L -o vestauth.tar.gz "https://github.com/vestauth/vestauth/releases/latest/download/vestauth-$(uname -s)-$(uname -m).tar.gz"
 tar -xzf vestauth.tar.gz
-./vestauth help
 ```
 
 </CodeGroup>
@@ -130,10 +127,10 @@ npm i vestauth --save
 
 ### Npm global
 
-You can also install globally using npm's `--global` flag.
+You can also install globally using npm's `--global` or `-g` flag.
 
 ```bash
-npm install vestauth --global
+npm i -g vestauth
 vestauth help
 ```
 
