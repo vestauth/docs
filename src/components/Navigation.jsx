@@ -194,6 +194,7 @@ export const navigation = [
     links: [
       { title: 'Install', href: '/docs/install' },
       { title: 'Basics', href: '/docs/quickstart' },
+      { title: 'Advanced', href: '/docs/advanced' },
     ]
   },
   {
