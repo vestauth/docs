@@ -20,7 +20,7 @@ export const description =
 Learn the basics of `vestauth` in just a few minutes. {{ className: 'lead' }} 
 
 - Agent: Identity & Authentication
-- Provider: Verification
+- Tool: Verification
 
 ## Agent: Identity & Authentication
 
@@ -46,7 +46,7 @@ $ curl https://api.vestauth.com/whoami
 {"error":{"status":400,"code":null,"message":"bad_request","help":null,"meta":null}}
 ```
 
-## Provider: Verification
+## Tool: Verification
 
 > Verify requests and safely trust agent identity using cryptographic proof.
 
@@ -63,10 +63,10 @@ app.get('/whoami', async (req, res) => {
 
     // --------------------------------------------------------------------------------
     // 🪪 Reveal the agent's cryptographic identity.                                 //
-    // The `provider.verify` method turns your endpoint into a cryptographically     //
-    // authenticated provider — verifying signatures, keys, and returning the agent. //
+    // The `tool.verify` method turns your endpoint into a cryptographically     //
+    // authenticated tool — verifying signatures, keys, and returning the agent. //
     // --------------------------------------------------------------------------------
-    const agent = await vestauth.provider.verify(req.method, url, req.headers)
+    const agent = await vestauth.tool.verify(req.method, url, req.headers)
 
     res.json(agent)
   } catch (err) {
